@@ -7145,7 +7145,7 @@ Constraints::allSolutions(SCEVExpander &Exp, llvm::Type *T, Instruction *IP,
   return {};
 }
 
-constexpr bool SparseDebug = true;
+constexpr bool SparseDebug = false;
 std::shared_ptr<const Constraints>
 getSparseConditions(bool &legal, Value *val,
                     std::shared_ptr<const Constraints> defaultFloat,
