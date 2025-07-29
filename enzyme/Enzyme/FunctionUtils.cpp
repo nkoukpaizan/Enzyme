@@ -7613,6 +7613,7 @@ void fixSparseIndices(llvm::Function &F, llvm::FunctionAnalysisManager &FAM,
     return;
   }
 
+  llvm::errs() << "forSparsification.size() = " << forSparsification.size() << "\n";
   //if (forSparsification.size() == 0) {
   //  auto context = &F.getEntryBlock().front();
   //  EmitFailure("NoSparsification", context->getDebugLoc(), context, "F: ", F,
