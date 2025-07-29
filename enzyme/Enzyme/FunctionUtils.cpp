@@ -7613,12 +7613,12 @@ void fixSparseIndices(llvm::Function &F, llvm::FunctionAnalysisManager &FAM,
     return;
   }
 
-  if (forSparsification.size() == 0) {
-    auto context = &F.getEntryBlock().front();
-    EmitFailure("NoSparsification", context->getDebugLoc(), context, "F: ", F,
-                "\n Found no stores for sparsification");
-    return;
-  }
+  //if (forSparsification.size() == 0) {
+  //  auto context = &F.getEntryBlock().front();
+  //  EmitFailure("NoSparsification", context->getDebugLoc(), context, "F: ", F,
+  //              "\n Found no stores for sparsification");
+  //  return;
+  //}
 
   for (const auto &pair : forSparsification) {
     auto L = pair.first;
